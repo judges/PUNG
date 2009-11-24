@@ -1,0 +1,2 @@
+module NewspappersHelper
+end

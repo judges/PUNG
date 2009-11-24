@@ -1,0 +1,45 @@
+<% content_for :sidebar do %>
+  <li><%= link_to 'Нове видання', new_newspapper_path %></li>
+<% end %>
+
+<div class="block">
+  <div class="sidebar-block">
+    <h3>Пошук видань</h3>
+    <form action="#" class="form login">
+      <label class="label left">Назва видання</label><input type="text" class="text_field" />
+      <label class="label left">Регіон</label><%= collection_select(:newspapper, :regionid, Region.all, :id, :name) %>
+      <input type="submit" class="button" value="Пошук" />
+  </form>
+</div>
+</div>
+
+<h1>Список видань</h1>
+<table class="table">
+  <tr>
+    <th><%=t :Regionid %></th>
+    <th><%=t :Newspappername %></th>
+    <th><%=t :Newspappertype %></th>
+    <th><%=t :Newspasserperiod %></th>
+    <th><%=t :Newsspapperpages %></th>
+    <th><%=t :Actions %></th>
+  </tr>
+
+<% @newspappers.each do |newspapper| %>
+  <tr>
+    <td><%=h Region.find(newspapper.regionid).name  %></td>
+    <td><%=h newspapper.newspappername %></td>
+    <td><%=h newspapper.newspappertype %></td>
+    <td><%=h newspapper.newspasserperiod %></td>
+    <td><%=h newspapper.newsspapperpages %></td>
+    <td>
+      <%= link_to 'Відобразити', newspapper %>
+      <%= link_to 'Редагувати', edit_newspapper_path(newspapper) %>
+      <%= link_to 'Видалити', newspapper, :confirm => 'Ви впевнені що хочите видалити?', :method => :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

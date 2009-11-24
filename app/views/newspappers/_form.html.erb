@@ -1,0 +1,39 @@
+<% form_for(@newspapper) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%=t :Regionid %><br />
+    <%=  collection_select(:newspapper, :regionid, Region.all, :id, :name) %>
+  </p>
+  <p>
+  <p>
+    <%=t :Newspappername%><br />
+    <%= f.text_field :newspappername %>
+  </p>
+  <p>
+    <%=t :Newspappertype %><br />
+    <%= select("newspappertype", "newspappertype",  %w[газета журнал], {1, 2}) %>
+  </p>
+  <p>
+    <%=t :Newspasserperiod %><br />
+    <%= f.text_field :newspasserperiod %>
+  </p>
+  <p>
+    <%=t :Newsspapperpages %><br />
+    <%= f.text_field :newsspapperpages %>
+  </p>
+  <p>
+    <%=t  :Newspapperprinttype %><br />
+    <%= f.text_field :newspapperprinttype %>
+  </p>
+  <p>
+    <%=t :Newsspapperdescription %><br />
+    <%= f.text_area :newsspapperdescription, :class => 'text_area', :size => "30x7" %>
+  </p>
+  <p>
+    <%=t :Comments %><br />
+    <%= f.text_area :comments, :class => 'text_area', :size => "30x7" %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

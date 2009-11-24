@@ -1,0 +1,51 @@
+<% content_for :sidebar do %>
+	<li><%= link_to 'New mediaplan', new_mediaplan_path %></li>
+<% end %>
+<div class="block">
+  <div class="sidebar-block">
+        <h3>Пошук видань</h3>
+          <form action="#" class="form login">
+                <label class="label left">Назва видання</label><input type="text" class="text_field" />
+                <input type="submit" class="button" value="Пошук" />
+          </form>
+        </div>
+			</div>
+
+<table class="table">
+  <tr>
+    <th>Rianame</th>
+    <th>Riacontactpersone</th>
+    <th>Riaphone</th>
+    <th>Riamobile</th>
+    <th>Riaemail</th>
+    <th>Mediaplanauthidory</th>
+    <th>Mediaplanexits</th>
+    <th>Mediaplanmonth</th>
+    <th>Mediaplaaddstypeid</th>
+    <th>Mediaplasize</th>
+    <th>Mediaplanaditionalinfo</th>
+  </tr>
+
+<% @mediaplans.each do |mediaplan| %>
+  <tr>
+    <td><%=h mediaplan.rianame %></td>
+    <td><%=h mediaplan.riacontactpersone %></td>
+    <td><%=h mediaplan.riaphone %></td>
+    <td><%=h mediaplan.riamobile %></td>
+    <td><%=h mediaplan.riaemail %></td>
+    <td><%=h mediaplan.mediaplanauthidory %></td>
+    <td><%=h mediaplan.mediaplanexits %></td>
+    <td><%=h mediaplan.mediaplanmonth %></td>
+    <td><%=h mediaplan.mediaplaaddstypeid %></td>
+    <td><%=h mediaplan.mediaplasize %></td>
+    <td><%=h mediaplan.mediaplanaditionalinfo %></td>
+    <td><%= link_to 'Show', mediaplan %></td>
+    <td><%= link_to 'Edit', edit_mediaplan_path(mediaplan) %></td>
+    <td><%= link_to 'Destroy', mediaplan, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

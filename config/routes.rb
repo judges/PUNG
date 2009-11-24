@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :newsppapperorders
-  map.resources :addsblocks
+  #Контроллер про видання
   map.resources :newspappers
-  map.resources :addsses
+  
+  map.resources :mediaplans
+
   
   map.resources :user_sessions
 

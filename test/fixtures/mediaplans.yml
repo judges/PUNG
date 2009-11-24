@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  rianame: MyString
+  riacontactpersone: MyString
+  riaphone: MyString
+  riamobile: MyString
+  riaemail: MyString
+  mediaplanauthidory: MyText
+  mediaplanexits: 1
+  mediaplanmonth: 2009-11-23
+  mediaplaaddstypeid: 1
+  mediaplasize: MyText
+  mediaplanaditionalinfo: MyString
+
+two:
+  rianame: MyString
+  riacontactpersone: MyString
+  riaphone: MyString
+  riamobile: MyString
+  riaemail: MyString
+  mediaplanauthidory: MyText
+  mediaplanexits: 1
+  mediaplanmonth: 2009-11-23
+  mediaplaaddstypeid: 1
+  mediaplasize: MyText
+  mediaplanaditionalinfo: MyString

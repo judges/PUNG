@@ -9,20 +9,20 @@ require 'open-uri'
 require 'active_record/fixtures'
 
 
-Newspapperdetails.delete_all
-open("db/pappers.txt") do |newspappers|
-	newspappers.read.each_line do |papper|
-    newsspapperid, printday, format, blocks, newsppaperpages, pagetags, pagetyppe = papper.chomp.split("|")
-		Newspapperdetails.create!(
-#					:newsspapperid => newsspapperid,
-					:printday => printday,
-					:format => format,
-  				:blocks => blocks,
-					:newsppaperpages => newsppaperpages,
-					:pagetags => pagetags,
-					:pagetyppe => pagetyppe)
-		end
-end
+#Newspapperdetails.delete_all
+#open("db/pappers.txt") do |newspappers|
+#  newspappers.read.each_line do |papper|
+#    newsspapperid, printday, format, blocks, newsppaperpages, pagetags, pagetyppe = papper.chomp.split("|")
+#      Newspapperdetails.create!(
+#	#:newsspapperid => newsspapperid,
+#	:printday => printday,
+#	:format => format,
+#	:blocks => blocks,
+#	:newsppaperpages => newsppaperpages,
+#	:pagetags => pagetags,
+#	:pagetyppe => pagetyppe)
+#  end
+#end
 
 
 Region.create(:id =>1, :name=>"Автономна Республіка Крим")
@@ -52,16 +52,16 @@ Region.create(:id =>24, :name=>"Чернівецька| центр — Черн�
 Region.create(:id =>25, :name=>"Чернігівська| центр — Чернігів")
 
 
-Addss.create( :id =>1, :size => "1(256х373)", :price => " ", :printpyte => " ", :comments	=>" ")
-Addss.create( :id =>2, :size => "2/3 (256х248)", :price => " ", :printpyte => " ", :comments	=>" "	)
-Addss.create( :id =>3, :size => "1/2(256х184)", :price => " ", :printpyte => " ", :comments	=>" "	)
-Addss.create( :id =>4, :size => "1/2 (126х373)", :price => " ", :printpyte => " ", :comments	=>" ")
-Addss.create( :id =>5, :size => "1/3 (256х122)", :price => " ", :printpyte => " ", :comments	=>" "	)
-Addss.create( :id =>6, :size => "1/3 (126х248)", :price => " ", :printpyte => " ", :comments	=>" "	)
-Addss.create( :id =>7, :size => "1/4 (256х92)", :price => " ", :printpyte => " ", :comments	=>" "	)
-Addss.create( :id =>8, :size => "1/4 (126х186)", :price => " ", :printpyte => " ", :comments	=>" ")
-Addss.create( :id =>9, :size => "1/5 (126х149)", :price => " ", :printpyte => " ", :comments	=>" "	)
-Addss.create( :id =>10, :size => "1/8 (126х93)", :price => " ", :printpyte => " ", :comments	=>" "	)# db/seed.rb
+#Addss.create( :id =>1, :size => "1(256х373)", :price => " ", :printpyte => " ", :comments	=>" ")
+#Addss.create( :id =>2, :size => "2/3 (256х248)", :price => " ", :printpyte => " ", :comments	=>" "	)
+#Addss.create( :id =>3, :size => "1/2(256х184)", :price => " ", :printpyte => " ", :comments	=>" "	)
+#Addss.create( :id =>4, :size => "1/2 (126х373)", :price => " ", :printpyte => " ", :comments	=>" ")
+#Addss.create( :id =>5, :size => "1/3 (256х122)", :price => " ", :printpyte => " ", :comments	=>" "	)
+#Addss.create( :id =>6, :size => "1/3 (126х248)", :price => " ", :printpyte => " ", :comments	=>" "	)
+#Addss.create( :id =>7, :size => "1/4 (256х92)", :price => " ", :printpyte => " ", :comments	=>" "	)
+#Addss.create( :id =>8, :size => "1/4 (126х186)", :price => " ", :printpyte => " ", :comments	=>" ")
+#Addss.create( :id =>9, :size => "1/5 (126х149)", :price => " ", :printpyte => " ", :comments	=>" "	)
+#Addss.create( :id =>10, :size => "1/8 (126х93)", :price => " ", :printpyte => " ", :comments	=>" "	)# db/seed.rb
 
 
 #Fixtures.create_fixtures("#{Rails.root}/test/fixtures", "newspapper_details")

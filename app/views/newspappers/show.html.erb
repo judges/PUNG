@@ -1,0 +1,43 @@
+<% content_for :sidebar do %>
+  <li><%= link_to 'Редагувати', edit_newspapper_path(@newspapper) %></li>
+  <li><%= link_to 'Повернутись', newspappers_path %></li>
+<% end %>
+<p>
+  <b><%=t :Regionid %></b>
+  <%=h Region.find(@newspapper.regionid).name %>
+</p>
+
+<p>
+  <b><%=t :Newspappername %></b>
+  <%=h @newspapper.newspappername %>
+</p>
+
+<p>
+  <b><%=t :Newspappertype %></b>
+  <%=h @newspapper.newspappertype %>
+</p>
+
+<p>
+  <b><%=t :Newspasserperiod %></b>
+  <%=h @newspapper.newspasserperiod %>
+</p>
+
+<p>
+  <b><%=t :Newsspapperpages %></b>
+  <%=h @newspapper.newsspapperpages %>
+</p>
+
+<p>
+  <b><%=t :Newspapperprinttype %></b>
+  <%=h @newspapper.newspapperprinttype %>
+</p>
+
+<p>
+  <b><%=t :Newsspapperdescription %></b>
+  <%=h @newspapper.newsspapperdescription %>
+</p>
+
+<p>
+  <b><%=t :Comments %></b>
+  <%=h @newspapper.comments %>
+</p>

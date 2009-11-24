@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  newspappertid: 1
+  tyepeid: 1
+  sizeid: 1
+  price: 1
+
+two:
+  newspappertid: 1
+  tyepeid: 1
+  sizeid: 1
+  price: 1
