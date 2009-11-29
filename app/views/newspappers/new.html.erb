@@ -1,8 +1,7 @@
 <% content_for :sidebar do %>
-  <li><%= link_to 'Повернутись', newspappers_path %></li>
+  <li><%= link_to t('Back'), newspappers_path %></li>
 <% end %>
-<h1>Новий медіа продукт</h1>
+<h1><%= t('New newspappers') %></h1>
 
 <%= render :partial => 'form' %>
-
 

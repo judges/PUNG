@@ -1,6 +1,6 @@
 <% content_for :sidebar do %>
-  <li><%= link_to 'Редагувати', edit_newspapper_path(@newspapper) %></li>
-  <li><%= link_to 'Повернутись', newspappers_path %></li>
+  <li><%= link_to t('Edit'), edit_newspapper_path(@newspapper) %></li>
+  <li><%= link_to t('Back'), newspappers_path %></li>
 <% end %>
 <p>
   <b><%=t :Regionid %></b>
@@ -41,3 +41,4 @@
   <b><%=t :Comments %></b>
   <%=h @newspapper.comments %>
 </p>
+

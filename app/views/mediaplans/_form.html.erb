@@ -1,52 +1,51 @@
 <% form_for(@mediaplan) do |f| %>
   <%= f.error_messages %>
-
   <p>
-    <%= f.label :rianame %><br />
+    <%= f.label t(:rianame) %><br />
     <%= f.text_field :rianame %>
   </p>
   <p>
-    <%= f.label :riacontactpersone %><br />
+    <%= f.label t(:riacontactpersone) %><br />
     <%= f.text_field :riacontactpersone %>
   </p>
   <p>
-    <%= f.label :riaphone %><br />
+    <%= f.label t(:riaphone) %><br />
     <%= f.text_field :riaphone %>
   </p>
   <p>
-    <%= f.label :riamobile %><br />
+    <%= f.label t(:riamobile) %><br />
     <%= f.text_field :riamobile %>
   </p>
   <p>
-    <%= f.label :riaemail %><br />
+    <%= f.label t(:riaemail) %><br />
     <%= f.text_field :riaemail %>
   </p>
   <p>
-    <%= f.label :mediaplanauthidory %><br />
+    <%= f.label t(:mediaplanauthidory) %><br />
     <%= f.text_area :mediaplanauthidory %>
   </p>
   <p>
-    <%= f.label :mediaplanexits %><br />
+    <%= f.label t(:mediaplanexits) %><br />
     <%= f.text_field :mediaplanexits %>
   </p>
   <p>
-    <%= f.label :mediaplanmonth %><br />
-    <%= f.date_select :mediaplanmonth %>
+    <%= f.label t(:mediaplanmonth) %><br />
+    <%= calendar_date_select :mediaplan, :mediaplanmonth %>
   </p>
   <p>
-    <%= f.label :mediaplaaddstypeid %><br />
+    <%= f.label t(:mediaplaaddstypeid) %><br />
     <%= f.text_field :mediaplaaddstypeid %>
   </p>
   <p>
-    <%= f.label :mediaplasize %><br />
+    <%= f.label t(:mediaplasize) %><br />
     <%= f.text_area :mediaplasize %>
   </p>
   <p>
-    <%= f.label :mediaplanaditionalinfo %><br />
+    <%= f.label t(:mediaplanaditionalinfo) %><br />
     <%= f.text_field :mediaplanaditionalinfo %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit t('Create') %>
   </p>
 <% end %>
 

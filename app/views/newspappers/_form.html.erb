@@ -23,7 +23,7 @@
   </p>
   <p>
     <%=t  :Newspapperprinttype %><br />
-    <%= f.text_field :newspapperprinttype %>
+    <%= select("newspapperprinttype", "newspapperprinttype",  %w[Змішаний Газетний Глянцевий], {1, 2}) %>
   </p>
   <p>
     <%=t :Newsspapperdescription %><br />
@@ -37,3 +37,4 @@
     <%= f.submit 'Submit' %>
   </p>
 <% end %>
+

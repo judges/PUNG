@@ -1,9 +1,7 @@
 <% content_for :sidebar do %>
-	<li><%= link_to 'Back', mediaplans_path %></li>
+	<li><%= link_to t('Back'), mediaplans_path %></li>
 <% end %>
+  <h2 class="title"><%= t('New mediaplan') %></h2>
 
-<h1>New mediaplan</h1>
-
-<%= render :partial => 'form' %>
-
+    <%= render :partial => 'form' %>
 

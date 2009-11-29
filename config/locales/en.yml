@@ -1,25 +1,33 @@
 en:
-  Regionid: "Регіон"
-  Newspapperid: "Назва видання"
-  Newsadss: "Рекламний блок"
-  Printdate: "День виходу"
-  Printrequirement: " "
-  Newsaddsposiotion: "Розміщення на сторінці"
-  Addsbiscount: "Знижка"
-  Addsprice: "Загальна ціна"
-  Statuscreate: "Дата створення замовлення"
-  Statussend: "Відправлення макету"
-  Statusaccepted: "Макет отриман"
-  Statussusrcribe: "Макет направлений до друку"
-  Statusprinted: "Видання надруковане"
-  Statussendet: "Зразок видання відіслане"
-  Actions: "Дії"
-  ID: "№"
-  Newspappername: "Назва видання"
-  Newspappertype: "Тип видання"
-  Newspasserperiod: "Час виходу"
-  Newsspapperpages: "Кількість сторінок"
-  Size: "Розмір"
-  Price: "Ціна"
-  Printpyte: "Тип друку"
-  Comments: "Опис"
+    Back: Повернутись
+    Edit: Редагувати
+    Create: Створити
+    Show: Відобразити
+    Search: Пошук
+    mediaplan: Медіаплан
+    newspapper: Видавництво
+    Editing mediaplan: Редагувати медіалан
+    New mediaplan: Новий медіалан
+    rianame: Назва організації
+    riacontactpersone: ПІБ
+    riaphone: Контактний телефон
+    riamobile: Мобільний телефон
+    riaemail: E-mail
+    mediaplanauthidory: Цільова аудиторія
+    mediaplanexits: Кількість виходів
+    mediaplanmonth: Дата виходу
+    mediaplaaddstypeid: Тип реклами
+    mediaplasize: Розмір (ширіна х висота)
+    mediaplanaditionalinfo: Додаткова інформація
+    New newspappers: Нове видання
+    Regionid: Регіон
+    Newspappername: Назва видання
+    Newspappertype: Тип видання
+    Newspasserperiod: Періодичність
+    Newsspapperpages: Кількість сторінок
+    Actions: Дії
+    Newspapperprinttype: Тип друку
+    Newsspapperdescription: Опис
+    Comments: Кометнарій
+    regionsearch: Оберіть регіон
+

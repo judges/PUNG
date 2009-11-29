@@ -5,12 +5,12 @@
 <div class="block">
   <div class="sidebar-block">
     <h3>Пошук видань</h3>
-    <form action="#" class="form login">
-      <label class="label left">Назва видання</label><input type="text" class="text_field" />
-      <label class="label left">Регіон</label><%= collection_select(:newspapper, :regionid, Region.all, :id, :name) %>
-      <input type="submit" class="button" value="Пошук" />
-  </form>
-</div>
+     <% form_for :newspapper, :url => { :action => "search" } do |f| %>
+        <%= f.error_messages %>
+          <label class="label left"><b><%= t('regionsearch')%></b> : <%= collection_select(:newspapper, :regionid, Region.all, :id, :name) %></label>
+          <%= f.submit t('Search') %>
+      <% end %>
+  </div>
 </div>
 
 <h1>Список видань</h1>
@@ -41,5 +41,4 @@
 </table>
 
 <br />
-
 

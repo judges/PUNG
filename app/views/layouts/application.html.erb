@@ -2,11 +2,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link rel="canonical" href="favicon/" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="icon" type="image/gif" href="favicon/animated_favicon1.gif" />
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+
   <title>ПУМГ</title>
-  <%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/drastic-dark/style", :cache => true %>
+
   <script src = "/javascripts/jquery.js" type = "text/javascript"></script>
   <script src = "/javascripts/jquery-ui.js" type = "text/javascript"></script>
   <script src = "/javascripts/jrails.js" type = "text/javascript"></script>
+
+  <%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/drastic-dark/style", :cache => true %>
+
+  <%= javascript_include_tag "prototype" %>
+
+  <%= stylesheet_link_tag :all, :cache => true %>
+  <%= javascript_include_tag :all, :cache => true, :recursive => true %>
+
+
+  <%= calendar_date_select_includes params[:style]%>
+
+  </head>
+
+  <style>
+      pre {
+          background-color:black; color:white; padding:15px;
+      }
+      dd {
+        }
+      dt {
+          font-weight: bold;
+          width: 320px;
+        }
+    </style>
 </head>
 <body>
   <div id="container">
@@ -16,20 +47,20 @@
         <ul>
           <% if !current_user %>
             <li><a href="/users/new">Registre</a></li>
-	    <li><a href="/login" class="logout">Login</a></li>
-	  <% else %>
-	    <li><%= link_to "Media plan", mediaplans_path %>
-	    <li><%= link_to "Виданицство", newspappers_path %></li>
+            <li><a href="/login" class="logout">Login</a></li>
+          <% else %>
+            <li><%= link_to t('mediaplan'), mediaplans_path %>
+            <li><%= link_to t('newspapper'), newspappers_path %></li>
             <li><a href="/logout" class="logout">Logout</a></li>
           <% end %>
         </ul>
         <div class="clear"></div>
-      </div>      
+      </div>
       <div id="main-navigation">
         <ul></ul>
         <div class="clear"></div>
       </div>
-    </div>    
+    </div>
     <div id="wrapper">
       <div class="flash">
         <% flash.each do |type, message| -%>
@@ -43,19 +74,20 @@
         <div id="footer">
           <div class="block">
             <p>Copyright &copy; 2009 Molbuk IT.</p>
-          </div>      
+          </div>
         </div>
       </div>
       <div id="sidebar">
-	<% if yield(:sidebar) -%>
-	  <h3>Основні дії</h3>
-	  <ul class="navigation">
-	    <%= yield :sidebar %>
-	  </ul>
+        <% if yield(:sidebar) -%>
+           <h3>Основні дії</h3>
+           <ul class="navigation">
+            <%= yield :sidebar %>
+          </ul>
         <% end %>
       </div>
-      <div class="clear"></div>      
-    </div>    
+      <div class="clear"></div>
+    </div>
   </div>
 </body>
 </html>
+

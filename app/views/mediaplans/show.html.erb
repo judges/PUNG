@@ -1,61 +1,59 @@
 <% content_for :sidebar do %>
-	<li><%= link_to 'Edit', edit_mediaplan_path(@mediaplan) %></li>
-	<li><%= link_to 'Back', mediaplans_path %></li>
+	<li><%= link_to t('Edit'), edit_mediaplan_path(@mediaplan) %></li>
+	<li><%= link_to t('Back'), mediaplans_path %></li>
 <% end %>
 <p>
-  <b>Rianame:</b>
+  <b><%= t(:rianame) %>:</b>
   <%=h @mediaplan.rianame %>
 </p>
 
 <p>
-  <b>Riacontactpersone:</b>
+  <b><%= t(:riacontactpersone) %>:</b>
   <%=h @mediaplan.riacontactpersone %>
 </p>
 
 <p>
-  <b>Riaphone:</b>
+  <b><%= t(:riaphone) %>:</b>
   <%=h @mediaplan.riaphone %>
 </p>
 
 <p>
-  <b>Riamobile:</b>
+  <b><%= t(:riamobile) %>:</b>
   <%=h @mediaplan.riamobile %>
 </p>
 
 <p>
-  <b>Riaemail:</b>
+  <b><%= t(:riaemail) %>:</b>
   <%=h @mediaplan.riaemail %>
 </p>
 
 <p>
-  <b>Mediaplanauthidory:</b>
+  <b><%= t(:mediaplanauthidory) %>:</b>
   <%=h @mediaplan.mediaplanauthidory %>
 </p>
 
 <p>
-  <b>Mediaplanexits:</b>
+  <b><%= t(:mediaplanexits) %>:</b>
   <%=h @mediaplan.mediaplanexits %>
 </p>
 
 <p>
-  <b>Mediaplanmonth:</b>
+  <b><%= t(:mediaplanmonth) %>:</b>
   <%=h @mediaplan.mediaplanmonth %>
 </p>
 
 <p>
-  <b>Mediaplaaddstypeid:</b>
+  <b><%= t(:mediaplaaddstypeid) %>:</b>
   <%=h @mediaplan.mediaplaaddstypeid %>
 </p>
 
 <p>
-  <b>Mediaplasize:</b>
+  <b><%= t(:mediaplasize) %>:</b>
   <%=h @mediaplan.mediaplasize %>
 </p>
 
 <p>
-  <b>Mediaplanaditionalinfo:</b>
+  <b><%= t(:mediaplanaditionalinfo) %>:</b>
   <%=h @mediaplan.mediaplanaditionalinfo %>
 </p>
-
-
 

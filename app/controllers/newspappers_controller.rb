@@ -83,12 +83,9 @@ class NewspappersController < ApplicationController
     end
   end
 
-  def ajax_search
-    if params[ isearch]
-      query = query + token.strip
-      @posts = Post.find_with_ferret(query, :limit => 5)
-      render :layout => false
-    end
+  def search
+
   end
 
 end
+
