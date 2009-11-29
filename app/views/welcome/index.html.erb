@@ -1,5 +1,7 @@
-<% content_for :sidebar do %>
-	<li><%= link_to t('newspapper'), newspappers_path %></li>
+<% if current_user %>
+  <% content_for :sidebar do %>
+	  <li><%= link_to t('newspapper'), newspappers_path %></li>
+  <% end %>
 <% end %>
 <H1>П.У.М.Г. – це наш спільний офіс по роботі з РА в Києві.</H1>
 <br>
