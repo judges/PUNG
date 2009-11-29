@@ -34,7 +34,7 @@
   </p>
   <p>
     <%= f.label t(:mediaplaaddstypeid) %><br />
-    <%= f.text_field :mediaplaaddstypeid %>
+    <%= select("mediaplan", "mediaplaaddstypeid",  %w[Графічний Текстовий], {1, 2}) %>
   </p>
   <p>
     <%= f.label t(:mediaplasize) %><br />
@@ -42,7 +42,7 @@
   </p>
   <p>
     <%= f.label t(:mediaplanaditionalinfo) %><br />
-    <%= f.text_field :mediaplanaditionalinfo %>
+    <%= f.text_area :mediaplanaditionalinfo %>
   </p>
   <p>
     <%= f.submit t('Create') %>
